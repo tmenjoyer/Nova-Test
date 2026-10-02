@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NOVA — laboratoire créatif du futur.">
+<title>NOVA — Future Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor-glow"></div>
+<div class="noise"></div>
+
+<header class="header">
+  <a href="#home" class="brand" aria-label="NOVA accueil"><span>N</span>OVA</a>
+  <nav class="desktop-nav">
+    <a href="#home">Accueil</a><a href="#discover">Découvrir</a><a href="#lab">Le Lab</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" id="searchOpen" aria-label="Rechercher">⌕</button>
+    <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">◐</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+    <button class="small-cta" data-scroll="#contact">Lancer un projet <b>↗</b></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Accueil</a><a href="#discover">Découvrir</a><a href="#lab">Le Lab</a><a href="#contact">Contact</a>
+  <button class="small-cta" data-scroll="#contact">Lancer un projet ↗</button>
+</div>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><i></i> FUTURE LAB · 2026</div>
+    <h1>On ne prédit pas<br>le futur.<br><em>On le construit.</em></h1>
+    <p>NOVA transforme les idées ambitieuses en expériences digitales, interfaces et univers qui donnent envie d'aller plus loin.</p>
+    <div class="hero-actions">
+      <button class="primary" data-scroll="#discover">Explorer NOVA <span>↗</span></button>
+      <button class="text-btn" id="watchBtn">▶ Voir l'expérience <span>01:24</span></button>
+    </div>
+    <div class="trust"><span>01</span> Design <span>02</span> Technologie <span>03</span> Expérience</div>
+  </div>
+
+  <div class="hero-visual reveal">
+    <div class="orb-shell">
+      <div class="orb-ring ring-a"></div><div class="orb-ring ring-b"></div><div class="orb-ring ring-c"></div>
+      <div class="orb-core"><span>N</span></div>
+      <div class="orbit-dot dot-a"></div><div class="orbit-dot dot-b"></div>
+    </div>
+    <div class="floating-card fc-top"><span>STATUS</span><strong>ONLINE</strong><i></i></div>
+    <div class="floating-card fc-bottom"><span>PROJECTS</span><strong id="projectCount">128+</strong><small>this year</small></div>
+  </div>
+</section>
+
+<section class="metrics">
+  <div><strong data-count="128">0</strong><span>Projets explorés</span></div>
+  <div><strong data-count="42">0</strong><span>Expériences lancées</span></div>
+  <div><strong data-count="99">0</strong><span>% d'énergie créative</span></div>
+  <div><strong data-count="24">0</strong><span>H / jour, sans limite</span></div>
+</section>
+
+<section class="section" id="discover">
+  <div class="section-heading reveal">
+    <div><label>01 / DISCOVER</label><h2>Des concepts<br><em>hors norme.</em></h2></div>
+    <div class="section-side"><p>Chaque expérience NOVA commence par une question : « Et si on allait beaucoup plus loin ? »</p><button class="outline-btn" id="randomIdea">Une idée au hasard ↗</button></div>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">Tout</button>
+      <button class="filter" data-filter="ai">IA</button>
+      <button class="filter" data-filter="web">Web</button>
+      <button class="filter" data-filter="xr">XR</button>
+    </div>
+    <div class="search-mini">⌕ <input id="projectSearch" placeholder="Rechercher un projet..." autocomplete="off"></div>
+  </div>
+
+  <div class="project-grid" id="projectGrid">
+    <article class="project-card reveal" data-cat="ai" data-title="Aether intelligence artificielle">
+      <div class="project-art art-aether"><span>AI</span><b>01</b><div class="pulse"></div></div>
+      <div class="project-meta"><span>AI / SYSTEMS</span><button class="more" data-project="aether">Voir ↗</button></div>
+      <h3>AETHER</h3><p>Un système créatif qui transforme une intention en univers visuel.</p>
+    </article>
+    <article class="project-card reveal" data-cat="xr" data-title="Nexus réalité étendue">
+      <div class="project-art art-nexus"><span>XR</span><b>02</b><div class="cube"></div></div>
+      <div class="project-meta"><span>XR / IMMERSIVE</span><button class="more" data-project="nexus">Voir ↗</button></div>
+      <h3>NEXUS</h3><p>Un espace immersif où le digital devient un lieu à explorer.</p>
+    </article>
+    <article class="project-card reveal" data-cat="web" data-title="Flux web interface">
+      <div class="project-art art-flux"><span>WEB</span><b>03</b><div class="bars"></div></div>
+      <div class="project-meta"><span>WEB / PRODUCT</span><button class="more" data-project="flux">Voir ↗</button></div>
+      <h3>FLUX</h3><p>Une interface vivante conçue pour rendre la complexité simple.</p>
+    </article>
+    <article class="project-card reveal" data-cat="ai" data-title="Orbit intelligence">
+      <div class="project-art art-orbit"><span>AI</span><b>04</b><div class="orbit-mini"></div></div>
+      <div class="project-meta"><span>AI / DATA</span><button class="more" data-project="orbit">Voir ↗</button></div>
+      <h3>ORBIT</h3><p>Des données transformées en signaux clairs et compréhensibles.</p>
+    </article>
+  </div>
+  <div class="empty" id="emptyState">Aucun projet ne correspond à ta recherche.</div>
+</section>
+
+<section class="manifesto" id="lab">
+  <div class="manifesto-left reveal"><label>02 / THE LAB</label><h2>Créer avec<br><em>intention.</em></h2></div>
+  <div class="manifesto-right">
+    <div class="manifesto-item reveal"><span>01</span><div><h3>Curiosité radicale</h3><p>Nous partons de questions, pas de réponses toutes faites.</p></div></div>
+    <div class="manifesto-item reveal"><span>02</span><div><h3>Design utile</h3><p>La beauté compte. L'expérience compte davantage.</p></div></div>
+    <div class="manifesto-item reveal"><span>03</span><div><h3>Technologie humaine</h3><p>La technologie doit amplifier les idées, jamais les remplacer.</p></div></div>
+  </div>
+</section>
+
+<section class="experience">
+  <div class="experience-inner reveal">
+    <div><label>03 / EXPERIENCE</label><h2>Une interface qui<br><em>réagit à toi.</em></h2><p>Teste quelques interactions. Le projet est pensé comme une véritable expérience web, pas comme une image figée.</p></div>
+    <div class="command-box">
+      <div class="command-top"><span>LIVE INTERFACE</span><i>●</i></div>
+      <div class="command-line"><span>></span><b id="typedText">initializing_nova()</b><i>_</i></div>
+      <div class="command-results" id="commandResults"><span>✓ core online</span><span>✓ visual engine online</span><span>✓ creative mode enabled</span></div>
+      <button class="primary" id="runCommand">Exécuter le système <span>↗</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-head reveal"><label>04 / CONTACT</label><h2>Ton idée mérite<br><em>un vrai départ.</em></h2></div>
+  <form class="contact-form reveal" id="contactForm">
+    <div class="form-row"><label>Ton nom<input name="name" required placeholder="Alex"></label><label>Ton email<input name="email" type="email" required placeholder="alex@email.com"></label></div>
+    <label>Parle-nous du projet<textarea name="message" required placeholder="J'ai une idée pour..."></textarea></label>
+    <div class="form-bottom"><span>Réponse généralement sous 24h.</span><button class="primary" type="submit">Envoyer le signal <span>↗</span></button></div>
+  </form>
+</section>
+</main>
+
+<footer><a class="brand" href="#home"><span>N</span>OVA</a><span>© 2026 NOVA LAB</span><span>BUILT FOR WHAT'S NEXT</span><button id="topBtn">↑ Haut</button></footer>
+
+<div class="modal" id="modal"><div class="modal-backdrop" data-close></div><div class="modal-card"><button class="modal-close" data-close>×</button><div id="modalContent"></div></div></div>
+<div class="search-overlay" id="searchOverlay"><button class="modal-close" id="searchClose">×</button><div><label>SEARCH NOVA</label><input id="globalSearch" autofocus placeholder="Tape pour rechercher..."><p>Essaie « AI », « XR », « web » ou le nom d'un projet.</p></div></div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
